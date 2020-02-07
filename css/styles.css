@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
-
 @font-face {
     font-family: roboto-normal;
     src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
@@ -28,10 +27,11 @@ header {
     height: 57px;
     padding: 10px 20px;
 }
+
 header h1 {
     font-family: 'Lobster', cursive;
-
 }
+
 header label #icone-menu {
     width: 20px;
 }
@@ -40,9 +40,9 @@ header #abrir-menu {
     display: none;
 }
 
-header #abrir-menu:checked~nav {
+header #abrir-menu:checked ~ nav {
     left: 0;
-    opacity: 1;
+    opacity: .8;
 }
 
 header nav {
@@ -73,7 +73,7 @@ header nav a {
 
 main {
     padding: 0 8px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 /* BANNER */
@@ -109,7 +109,6 @@ main section#como-contratar {
 }
 
 main section#como-contratar article {
-    
     width: 100%;
     height: 150px;
     padding: 15px 15px;
@@ -133,4 +132,49 @@ main section#como-contratar iframe {
     margin-top: 20px;
     /* border-radius: 10px; */
     box-shadow: 0px 0px 6px rgba(0, 0, 0, .6);
+}
+
+/* DÚVIDAS CONTATO */
+
+main article#duvidas {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
+    /* border: 1px solid black; */
+}
+
+main article#duvidas img {
+    width: 30px;
+    height: 30px;
+}
+
+main article#duvidas figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid cyan;
+}
+
+
+
+
+main section#trabalhos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+
+main article#duvidas i {
+    font-size: 0.9rem;
+    color: cyan;
 }
