@@ -7,41 +7,52 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #333;
+    color: #999999;
     font-size: 16px;
 }
-#topo{
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#topo {
     position: fixed;
     left: 10px;
     bottom: 10px;
     color: #333;
     font-size: 2rem;
     transform: rotate(90deg);
-    
 }
+
 #go-top {
     opacity: 0;
     transition: opacity .6s;
 }
+
 /*************** MOBILE ***************/
 
 /* HEADER */
-#link-ligue{
+
+#link-ligue {
     /* margin-left: 50px; */
     font-size: 1rem;
     text-decoration: none;
     color: #333;
 }
+
 header {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     width: 100%;
-    padding: 15px 10px;
+    padding: 0;
 }
 
 /* LOGOTIPO */
+
 header img {
     width: 180px;
     margin-top: 5px;
@@ -109,460 +120,181 @@ header nav a {
 /************************ MAIN ************************/
 
 main {
-    padding: 20px 8px;
+    padding: 20px 0px;
     /* margin-top: 20px; */
 }
 
 /* BANNER */
+
 main section#banner {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main section#banner figure {
-    position: relative;
-    width: 100%;
-    height: 171px;
-}
-
-main section#banner figure img {
-    width: 100%;
-    height: 171px;
-    box-shadow: 0px 0px 3px rgb(51, 51, 51, .6);
-}
-
-main section#banner figure legend h1 {
-    position: absolute;
-    top: calc(50% - (2rem / 2));
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    color: white;
-    font-size: 41px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-}
-
-main section#banner h2 {
-    display: none;
-}
-
-/* COMO CONTRATAR */
-
-main section#como-contratar {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 30px;
-    color: #333;
-    /* background-color: cyan; */
-}
-
-main section#como-contratar article {
-    width: 100%;
-    height: 150px;
-    margin-bottom: 10px;
-    padding: 15px 15px;
-    background-color: #e9e9e9;
-    /* border-radius: 10px; */
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, .6);
-}
-main section#como-contratar iframe {
-    width: 100%;
-    height: 175px;
-}
-main section#como-contratar article h2 {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
-
-
-main section#como-contratar article p {
-    font-size: 0.9rem;
-    margin-top: 25px;
-}
-
-main section#como-contratar #video-contratar p {
-    margin: 20px 0 30px 0;
-    padding: 0 10px;
-}
-
-main section#como-contratar #video-contratar iframe {
-    width: 100%;
-    height: 175px;
-    margin-top: 30px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, .6);
-}
-
-/* **************** SLIDE SHOW ******************* */
-
-main section#trabalhos, main section#depoimentos {
-    background-color: #e9e9e9;
-    color: #333;
-    padding: 10px;
-}
-main section#trabalhos, h2 {
-    color: #333;
-}
-main section .carousel {
-    padding: 15px 0 0 0 ;
-    width: 80%;
-    margin: 0 auto;
-}
-main section .carousel img{
-    width: 90%;
-    height: 100%;
-    padding: 0 5px;
-}
-.viewer-toolbar>ul>li:before {
-    display: flex;
     justify-content: center;
     align-items: center;
 }
-main section#trabalhos .slick-slide  {
-    display: flex!important;
-    justify-content: center;
+
+main section#banner img {
+    width: 90%;
 }
-main section#trabalhos .slick-dots li button:before{
-    opacity: 0.15;
-    color: black;
-    font-size: 8px;
-}
-main section#trabalhos .slick-dots li.slick-active button:before{
-    color: cyan;
-    opacity: 0.85;
-    font-size: 8px;
-} 
-.slick-prev:before, .slick-next:before {
-    font-size: 25px;
-    opacity: 1;
-    color: cyan;
-}
-main section#trabalhos a#galeria, main section#trabalhos a#grafiteorcamento  {
+
+main section#banner .btn-link, main section#grafiteiro .btn-link {
     display: inline-block;
     /* width: 100%; */
-    margin-top: 10px;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    background-color: cyan;
-    color: #595958;
-    border-radius: 8px;
-}
-
-main section#trabalhos a#grafites {
-    display: inline-block;
-    width: 100%;
-    margin-top: 10px;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
-    text-decoration: none;
-    color: #595958;
-    border-radius: 8px;
-    border: cyan 1px solid
-}
-
-main section#trabalhos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-main section#trabalhos h2, main section#depoimentos h2 {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-main section#trabalhos p, main section#depoimentos p {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-main section#trabalhos p, main section#depoimentos p:nth-child(2) {
-    color:blue
-}
-
-main section#trabalhos, main section#depoimentos .slick-dots li button:before{
-    opacity: 0.15;
-    color: black;
-    font-size: 8px;
-}
-main section#trabalhos, main section#depoimentos .slick-dots li.slick-active button:before{
-    color: cyan;
-    opacity: 0.85;
-    font-size: 8px;
-} 
-
-main section#grafiteiro-profissional {
     margin-top: 20px;
-    padding: 0 10px;
-}
-
-main section#grafiteiro-profissional h2 {
-    text-align: center;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: black;
-}
-
-main section#grafiteiro-profissional p {
-    margin-bottom: 20px;
-}
-
-main section#grafiteiro-profissional ul {
-    margin: 20px 0;
-    padding-left: 15px;
-}
-
-/* **************** ANTES E DEPOIS ******************* */
-main section#antes-depois {
-    background-image: linear-gradient(to bottom, white, #eaeaea,#eaeaea, white);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-main section#antes-depois img#gostou-vantagens {
-    width: 100%;
-}
-
-
-main section#antes-depois h2, main section#antes-depois figure legend {
-    display: none;
-}
-
-main section#antes-depois h3 {
-    font-weight: normal;
-    text-align: center;
-    margin: 10px 0;
-    color: black;
-}
-
-main section#antes-depois figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-main section#antes-depois figure img {
-    width: 100%;
-}
-
-/* **************** PASSOS ******************* */
-
-main section.texto-informativo {
-    margin-top: 40px;
-    padding: 0 10px;
-}
-
-main section.texto-informativo h2, h3 {
-    font-size: 1rem;
-    text-align: center;
-}
-
-main section.texto-informativo h2 {
-    margin-bottom: 20px;
-}
-
-main section.texto-informativo h3 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-main section.texto-informativo p {
-    margin-bottom: 20px;
-}
-
-main section.texto-informativo p em {
-    font-style: normal;
-    font-weight: normal;
-}
-
-main section.texto-informativo figure {
-    width: 100%;
-}
-
-main section.texto-informativo figure img {
-    width: 250px;
-    display: block;
-    margin: 0 auto;
-}
-
-/* BOTÃO ORÇAMENTO */
-
-main section.texto-informativo div#botao-orcamento {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-main section.texto-informativo div a {
-    display: inline-block;
-    width: 100%;
-    padding: 20px;
+    padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: 500;
     text-align: center;
     text-decoration: none;
-    background-color: cyan;
-    color: #333;
+    background-color: #eabe32;
+    color: #fff;
     border-radius: 8px;
 }
 
-/* PRIMEIRA VEZ */
+/* GRAFITEIRO */
 
-main section#primeira-vez ol {
-    margin-bottom: 20px;
+main section#grafiteiro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
 }
 
-main section#primeira-vez ol li {
-    margin-left: 25px;
-}
-
-/* EBOOK */
-
-main section#ebook #form-box {
-    padding: 10px 30px 5px;
-    background-color: #e0e0e0;
-    border-radius: 15px 15px 0 0;
-}
-
-main section#ebook h2 {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+main section#grafiteiro h1 {
+    font-size: 2rem;
     text-align: center;
-    color: black;
 }
 
-main section#ebook form {
-    position: relative;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-image: linear-gradient(to bottom, #11fcfe, #a4e8f6, #cae3f4);
-    border-radius: 8px;
+main section#grafiteiro p {
+    width: 85%;
+    margin-top: 10px;
+    padding: 0 10px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.2rem;
 }
 
-main section#ebook form h3 {
+main section#grafiteiro p span {
+    display: block;
+    color: #eabe32;
+}
+
+/* GRAFITEIRO FAZ */
+
+main section#grafiteiro #grafiteirofaz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 100vw;
+    margin-top: 20px;
+    background-color: #eabe32;
+}
+
+main section#grafiteiro #grafiteirofaz h2 {
+    display: flex;
+    flex-direction: column;
+    color: #808080;
     font-size: 1.3rem;
-    color: white;
-    font-weight: 500;
-    margin-bottom: 30px;
+    line-height: 30px;
+    text-align: center;
 }
 
-main section#ebook form input {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 1.3rem;
-    color: #333;
-    outline: none;
-    border: none;
+main section#grafiteiro #grafiteirofaz h2 span {
+    color: #fff;
 }
 
-main section#ebook form button {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 55px;
-    border-radius: 8px;
-    border: none;
-    background-color: cyan;
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 500;
+main section#grafiteiro #grafiteirofaz p {
+    width: 85%;
+    margin-top: 20px;
+    color: #fff;
 }
 
-main section#ebook figure img {
-    margin-top: 25px;
-    width: 100%;
+article#artegrafite {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-/* VISTORIA */
+article#artegrafite img {
+    width: 80%;
+}
 
-main article#vistoria {
+/* TRABALHOS REALIZADOS */
+
+section#realizados, section#avaliacoes {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-main article#vistoria img {
-    width: 80%;
-    display: block;
-    margin-bottom: 15px;
-}
-
-main section.texto-informativo h4 {
-    font-size: 1rem;
+section#realizados h3, section#avaliacoes h3 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    font-size: 1.8rem;
 }
 
-main section.texto-informativo ol {
-    margin-left: 15px;
-    margin-top: 15px;
-    margin-bottom: 20px;
+section#realizados h3 span, section#avaliacoes h3 span {
+    display: block;
+    color: #eabe32;
 }
 
-main section.texto-informativo ol li {
-    margin-bottom: 20px;
+/* TEXTOS INFORMATIVOS */
+
+section.informativo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
-/* ***********EBOOK*************** */
-
-main section#ebook form {
-    position: relative;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-image: linear-gradient(to bottom, #11fcfe, #a4e8f6, #cae3f4);
-    border-radius: 8px;
+section.informativo h2 {
+    font-size: 1.8rem;
 }
 
-main section#ebook form h3 {
-    font-size: 1.3rem;
-    color: white;
-    font-weight: 500;
-    margin-bottom: 30px;
+section.informativo span {
+    color: #eabe32;
+    display: block;
 }
 
-main section#ebook form input {
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 1.3rem;
-    color: #333;
-    outline: none;
-    border: none;
+section.informativo p {
+    width: 85%;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
-main section#ebook form button {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    width: 100%;
-    height: 55px;
-    border-radius: 8px;
-    border: none;
-    background-color: cyan;
-    font-size: 1.3rem;
-    color: #333;
-    font-weight: 500;
+section.informativo h3 {
+    align-self: flex-start;
+    width: 60%;
+    margin-top: 20px;
+    margin-left: 35px;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: left;
+    text-transform: none;
+    /* border: 1px solid red; */
 }
+
+section.informativo ul {
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-left: 35px;
+    /* border: 1px solid red; */
+}
+
+section.informativo ul li {
+    width: 85%;
+    margin-left: 35px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
 
 /* ***********ORÇAMENTO*************** */
 
@@ -571,13 +303,10 @@ main section#orcamento {
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
-    /* border: 1px solid red; */
 }
 
 main section#orcamento h2 {
-    font-size: 1.2rem;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
 main section#orcamento p {
@@ -601,12 +330,12 @@ main section#orcamento figure {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    border: 2px solid cyan;
+    border: 2px solid #eabe32;
 }
 
 main section#orcamento i {
     font-size: 0.9rem;
-    color: cyan;
+    color: #eabe32;
 }
 
 main section#orcamento form {
@@ -615,8 +344,11 @@ main section#orcamento form {
     align-items: center;
     width: 100%;
     padding: 20px 15px;
-    background-color: #e0e0e0;
+    background-color: #eabe32;
     border-radius: 8px;
+}
+main section#orcamento form h2 {
+    margin: 20px 0
 }
 
 main section#orcamento form input {
@@ -625,7 +357,7 @@ main section#orcamento form input {
     margin-bottom: 20px;
     padding: 10px 20px;
     font-size: 1rem;
-    color: #333;
+    color: #999;
     font-weight: 300;
     outline: none;
     border: none;
@@ -637,7 +369,7 @@ main section#orcamento form textarea {
     margin-bottom: 20px;
     padding: 10px 20px;
     font-size: 1rem;
-    color: #333;
+    color: #999;
     font-weight: 300;
     outline: none;
     border: none;
@@ -648,539 +380,173 @@ main section#orcamento form button {
     width: 100%;
     height: 55px;
     border-radius: 8px;
-    border: none;
-    background-color: cyan;
+    border: 1px solid #333;
+    background-color: transparent;
     font-size: 1.3rem;
     color: #333;
     opacity: 1;
     font-weight: 500;
 }
 
-#botao-orcamento a {
-    position: relative;
-}
-
-#botao-orcamento a div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: calc(50% - 17px);
-    left: calc(50% - 100px);
-    width: 200px;
-    height: 34px;
-    background-color: cyan;
-}
-
-.mudarexto-orcamento {
-    animation-name: mudarexto-orcamento;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-.mudarexto1 {
-    animation-name: mudarexto1;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    z-index: 2;
-}
-
-.mudarexto2 {
-    animation-name: mudarexto2;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    z-index: 1;
-}
 
 
 
-@keyframes mudarexto-orcamento{
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes mudarexto1 {
-    from {
-        z-index: 1;
-    }
-    to {
-        z-index: 2;
-    }
-}
-
-/* DÚVIDAS CONTATO */
-
-main article#duvidas {
-    position: fixed;
-    bottom: 5px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100px;
-    /* border: 1px solid black; */
-}
-
-main article#duvidas img {
-    width: 45px;
-    height: 45px;
-}
-
-main article#duvidas figure {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: 2px solid cyan;
-}
-
-main article#duvidas i {
-    font-size: 0.9rem;
-    color: cyan;
-}
-
-footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-footer a{
-    text-decoration: none;
-    color: inherit;
-}
-footer p#redes-sociais {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-}
-footer p#redes-sociais i {
-    font-size: 1.5rem;
-    margin-right: 30px;
-}
-footer p {
-    width: 100%;
-    font-size: .9rem;
-    text-align: center;    
-}
-
-footer p em {
-    font-style: normal;
-    font-weight: 700;
-}
-footer p em span {
-    font-weight: 300;
-}
-
-
-/*************** TABLET ***************/
+/* ***************** TABLETS ***************** */
 
 @media screen and (min-width: 768px) {
-    header {
-        padding: 20px 20px;
-    }
-    
-    /* LOGOTIPO */
     header img {
-        width: 350px;
+        width: 400px;
+        margin-top: 20px;
     }
-    header label i {
-        font-size: 2.5rem;
-    }
-
-    /* MAIN */
     main {
-        margin-top: 20px;
-        /* padding: 20px 20px; */
-    }
-    /* Banner */
-    main section#banner figure {
-        width: 100%;
-        height: 350px;
-    }
-    main section#banner figure img {
-        width: 100%;
-        height: 350px;
-    }
-    main section#banner figure legend h1 {
-        top: calc(50% - (80px / 2));
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80px;
-        font-size: 5rem;
-    }
-
-    /* COMO CONTRATAR - VÍDEOS */
-    main section#como-contratar {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        height: 450px;
-        /* border: 2px solid purple; */
-    }
-    main section#como-contratar #entenda {
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
-        width: 48%;
-        height: 100%;
-        /* border: 1px solid green; */
-    }
-    
-    main section#como-contratar article {
-        width: 100%;
-        margin-bottom: 0;
-        height: 175px;
-        /* border: 1px solid red; */
-    }
-    
-    main section#como-contratar  #entenda iframe {
-        height: 50%;
-        margin-top: 20px;
-    }
-
-    /* **************** SLIDE SHOW ******************* */
-
-    main section .carousel {
-        width: 83%;
-    }
-    main section#depoimentos .carousel {
-        width: 45%;
-    }
-    main section#depoimentos .slick-next {
-        right: -165px;
-    }
-    main section#depoimentos .slick-prev {
-        left: -165px;
-    }
-    main section#como-contratar article h2 {
-        font-size: 1.3rem;
-    }
-    main section#como-contratar article p {
-        font-size: 1.1rem;
-    }
-    main section#como-contratar #video-contratar {
-        width: 48%;
-    }
-    main section#como-contratar #video-contratar iframe {
-        width: 100%;
-        height: 175px;
-        margin-top: 0;
-    }
-    main section#como-contratar #video-contratar p {
-        font-size: 1.3rem;
-        /* display: none; */
-    }
-    /* TRABALHOS */
-    main section#trabalhos {
-        margin-top: 30px;
-    }
-    /* GRAFITEIRO PROFISSIONAL */
-    main section#grafiteiro-profissional {
-        margin-top: 40px;
-    }
-    main section#grafiteiro-profissional h2 {
-        font-size: 1.5rem;
-    }
-    main section#grafiteiro-profissional p, main section#grafiteiro-profissional li {
-        font-size: 1.3rem;
-    }
-    /* ANTES E DEPOIS */
-    main section#antes-depois {
-        display: flex;
-        /* flex-direction: row; */
-        flex-wrap: wrap;
-        justify-content: space-around;
-        /* border: 2px solid purple; */
-        margin-top: 40px;
-    }
-    main section#antes-depois div {
-        width: 45%;
-    }
-    main section#antes-depois div figure img {
-        width: 100%;
-    }
-
-    main section#antes-depois figure img {
-        width: 95%;
-        height: 320px;
-    }
-   
-    
-    main section#antes-depois>img {
-        height: 100px;
-        margin-top: 20px;
-    }
-    /* TEXTOS INFORMATIVOS */
-    main section.texto-informativo p, main section.texto-informativo h2, main section.texto-informativo h3, main section.texto-informativo h4, main section.texto-informativo ol, main section.texto-informativo em {
-        font-size: 1.3rem;
-    }
-    main section.texto-informativo figure img {
-        /* width: 350px; */
-        margin: 50px auto;
-    }
-    /* EBOOK FORM */
-    main section#ebook #form-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-    }
-    main section#ebook #form-box h2 {
-        font-size: 1.3rem;
-    }
-    main section#ebook #form-box form {
-        width: 90%;
-    }
-    main section#ebook #form-box form input, main section#ebook #form-box form button {
-        height: 60px;
-        font-size: 1.3rem;
-    }
-    main section#ebook #form-box form button {
-        font-size: 1.5rem;
-    }
-    /* VISTORIA ANTES E DEPOIS */
-    main article#vistoria {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 20px;
-        margin-top: 40px;
-    }
-    main article#vistoria img {
-        width: 45%;
-    }
-    /* ORÇAMENTO */
-    main section#orcamento h2 {
-        font-size: 1.5rem;
-    }
-    main section#orcamento P {
-        font-size: 1.3rem;
-    }
-    main section#orcamento img {
-        width: 65px;
-        height: 65px;
-    }
-    main section#orcamento figure {
-        width: 65px;
-        height: 65px;
-    }
-    main section#orcamento i {
-        font-size: 1.3rem;
-    }
-    main section#orcamento form {
-        margin-top: 40px;
-    }
-    main section#orcamento form input {
-        height: 60px;
-        font-size: 1.3rem;
-    }
-    main section#orcamento form textarea {
-        font-size: 1.3rem;
-    }
-    main section#antes-depois img#gostou-vantagens {
-        width: 90%;
-        height: 200px; 
-        margin-left: calc(50% - 45%);
-     
-    }
-}
-
-/* DESKTOP */
-
-@media screen and (min-width: 992px) {
-    h2, h3, h4, p, li {
-        font-size: 1.5rem !important;
-    }
-    #container {
-        max-width: 992px;
-        margin: 0 auto;
-    }
-    header {
-        position: static;
-        padding: 20px 0;
-    }
-    header label {
-        display: none;
-    }
-    header nav {
-        position: static;
-        opacity: 1;
-    }
-    header nav {
-        flex-direction: row;
-        width: 50%;
-        height: 50px;
-        padding: 0;
-        background-color: transparent;
-    }
-    header nav div {
-        display: none;
-    }
-    header nav ul {
-        position: static;
-        font-size: 1rem;
-        text-align: right;
-    }
-    header nav a {
-        text-decoration: none;
-        color: #333;
-        width: 90%;
-        border: none;
-        padding: 0;
-        font-size: 1.4rem;
-    }
-    header nav a:hover {
-        color: cyan;
-    }
-    
-    main {
-        padding: 0;
+        padding: 50px 0px 20px;
         /* margin-top: 20px; */
     }
-    /* BANNER */
-    main section#banner figure {
-        width: 100%;
-        height: auto;
+    main section#banner img {
+        width: 70%;
     }
-    main section#banner figure img {
-        width: 100%;
-        height: 450px;
+    main section#banner .btn-link, main section#grafiteiro .btn-link {
+        margin-top: 40px;
+        padding: 15px 40px;
+        font-size: 1.5rem;
     }
-    /* COMO CONTRATAR */
-    main section#como-contratar article {
-        width: 470px;
-        height: 190px;
-        padding: 15px 15px;
+    main section#grafiteiro {
+        margin-top: 40px;
     }
-    main section#como-contratar #video-contratar {
-        width: 470px;
+    main section#grafiteiro h1 {
+        font-size: 4rem;
+        text-align: center;
+        /* margin-top: 20px; */
     }
-    main section#como-contratar #video-contratar iframe {
-        width: 470px;
-        height: 190px;
+    main section#grafiteiro p {
+        margin-top: 20px;
+        width: 50%;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
     }
-    main section#como-contratar #video-contratar p {
-        display: block;
+    main section#grafiteiro article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
     }
-    /* ANTES E DEPOIS */
-    main section#antes-depois figure img {
-        width: 95%;
+    main section#grafiteiro #grafiteirofaz h2 {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        color: #808080;
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+        text-align: center;
     }
-    /* img-profissional */
-    main section.texto-informativo figure img {
-        width: 650px !important;
-        margin: 50px auto;
+    main section#grafiteiro #grafiteirofaz p {
+        width: 50%;
     }
-    main section.texto-informativo div a {
-        width: 650px;
-    }
-    #frm-orcamento h2 {
-        font-size: 2rem !important;
-        font-weight: 100;
-        color: #333;
-    }
-
-    /* EBOOK */
-    main section#ebook {
-        padding-bottom: 200px;
-        background-image: url('../assets/imagens-corpo-do-site/ebook-background.jpg') ;
-        background-size: 100% 100%;
-        /* background-size: cover; */
-        background-origin: border-box;
-        background-repeat: no-repeat;
-        /* border: 5px solid red; */
-    }
-    
-    main section#ebook div#form-box {
-        flex-direction: row;
+    /* REALIZADOS */
+    /* section#realizados, section#avaliacoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        width: 100%;
-        margin: 0;
+    } */
+    section#realizados h3, section#avaliacoes h3 {
+        font-size: 2.8rem;
+        line-height: 3.8rem
+    }
+    /* TEXTOS INFORMATIVOS */
+    section.informativo h2 {
+        width: 60%;
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+    }
+    section.informativo p {
+        margin-top: 40px;
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+    section.informativo h3 {
+        width: 85%;
+        margin-top: 20px;
+        margin-left: 100px;
+        font-size: 1.8rem;
+    }
+    section.informativo ul {
+        margin-top: 40px;
+        margin-left: 100px;
+    }
+    section.informativo ul li {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+}
+
+/* ***************** DESKTOPS ***************** */
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {
+    header {
+        margin-top: 20px;
+    }
+    main {
         padding: 0;
-        border-radius: 0;
-        background-color: transparent;
+        margin-top: 40px;
     }
-
-    main section#ebook div#form-box form {
-        width: 400px;
+    main section#banner {
+        margin-top: 0px;
+    }
+    main section#banner img {
+        width: auto;
+        max-height: 600px;
+    }
+    /* main section#grafiteiro h1 {
+        font-size: 4rem;
+        margin-top: 20px;
+    } */
+    main section#grafiteiro p {
+        margin-top: 20px;
+        width: 50%;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    main section#grafiteiro #grafiteirofaz {
+        margin-top: 40px;
+        height: 60vh;
+    }
+    main section#grafiteiro #grafiteirofaz h2 {
+        width: 30%;
+        font-size: 2.8rem;
+        line-height: 3.8rem;
+    }
+    main section#grafiteiro #grafiteirofaz p {
+        width: 50%;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+    }
+    article#artegrafite img {
+        max-width: 1000px;
+        /* margin-top: 40px; */
+    }
+    /* REALIZADOS */
+    section#realizados h3, section#avaliacoes h3 {
+        font-size: 2.8rem;
+        line-height: 3.8rem
+    }
+    /* TEXTOS INFORMATIVOS */
+    section.informativo h2 span {
+        display: inline;
+    }
+    section.informativo p {
+        width: 90%;
+    }
+    section.informativo h3 {
         margin-left: 200px;
-        margin-top: 150px;
-
     }
-    main section#ebook div#form-box form button {
-        bottom: -70px;
-
-    }
-    
-    main section#ebook figure {
-        display: none;
-    }
-
-
-    main section#antes-depois img#gostou-vantagens {
-        width: 100%;
-        height: 300px; 
-        margin: 0;
-        margin-top: 20px;
+    section.informativo ul {
+        margin-left: 200px;
     }
 }
 
-@media screen and (min-width: 1444px) {
-    #container {
-        max-width: 1444px;
-    }
-    /* header {
-        margin-bottom: 60px;
-    } */
-    /* BANNER */
-    main section#banner figure legend h1 {
-        font-size: 8rem;
-    }
-    main section#banner figure {
-        width: 100%;
-        height: auto;
-    }
-    main section#banner figure img {
-        width: 100%;
-        height: 650px;
-    }
-    /* COMO CONTRATAR */
-    /* main section#como-contratar article {
-        width: 48%;
-        height: 190px;
-        padding: 15px 15px;
-    } */
-    
-    main section#como-contratar {
-        height: 600px;
-    }
-    main section#como-contratar #video-contratar {
-        width: 48%;
-    }
+/* ***************** FULL HD ***************** */
 
-    main section#como-contratar #entenda article {
-        width: 100%;
-        /* height: 350px; */
-    }
-    main section#como-contratar #entenda iframe {
-        height: 100%;
-        height: 350px;
-        margin-top: 20px;
-    }
-    main section#como-contratar #video-contratar iframe {
-        width: 100%;
-        height: 350px;
-    }
-}
+@media screen and (min-width: 1440px) {}
