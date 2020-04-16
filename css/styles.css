@@ -365,6 +365,7 @@ main section#orcamento form input {
     color: #999;
     font-weight: 300;
     outline: none;
+    border-collapse: none;
     /* border: none; */
     border: 1px solid #eabe32;
     border-radius: 5px;
@@ -568,9 +569,11 @@ footer p em span {
     
     main section#orcamento form button {
         width: 85%;
+        max-width: 290px;
         height: 60px;
         font-size: 1.6rem;
         margin-bottom: 40px;
+        color: #fff;
     }
 
     /* FOOTER */
