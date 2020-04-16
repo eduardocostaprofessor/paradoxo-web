@@ -10,28 +10,32 @@ body {
     color: #333;
     font-size: 16px;
 }
-#topo{
+
+#topo {
     position: fixed;
     left: 10px;
     bottom: 10px;
     color: #333;
     font-size: 2rem;
     transform: rotate(90deg);
-    
 }
+
 #go-top {
     opacity: 0;
     transition: opacity .6s;
 }
+
 /*************** MOBILE ***************/
 
 /* HEADER */
-#link-ligue{
+
+#link-ligue {
     /* margin-left: 50px; */
     font-size: 1rem;
     text-decoration: none;
     color: #333;
 }
+
 header {
     position: relative;
     display: flex;
@@ -42,6 +46,7 @@ header {
 }
 
 /* LOGOTIPO */
+
 header img {
     width: 180px;
     margin-top: 5px;
@@ -114,6 +119,7 @@ main {
 }
 
 /* BANNER */
+
 main section#banner {
     display: flex;
     justify-content: center;
@@ -172,16 +178,16 @@ main section#como-contratar article {
     /* border-radius: 10px; */
     box-shadow: 0px 0px 3px rgba(0, 0, 0, .6);
 }
+
 main section#como-contratar iframe {
     width: 100%;
     height: 175px;
 }
+
 main section#como-contratar article h2 {
     font-size: 1rem;
     font-weight: normal;
 }
-
-
 
 main section#como-contratar article p {
     font-size: 0.9rem;
@@ -207,44 +213,53 @@ main section#trabalhos, main section#depoimentos {
     color: #333;
     padding: 10px;
 }
+
 main section#trabalhos, h2 {
     color: #333;
 }
+
 main section .carousel {
-    padding: 15px 0 0 0 ;
+    padding: 15px 0 0 0;
     width: 80%;
     margin: 0 auto;
 }
-main section .carousel img{
+
+main section .carousel img {
     width: 90%;
     height: 100%;
     padding: 0 5px;
 }
+
 .viewer-toolbar>ul>li:before {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-main section#trabalhos .slick-slide  {
+
+main section#trabalhos .slick-slide {
     display: flex!important;
     justify-content: center;
 }
-main section#trabalhos .slick-dots li button:before{
+
+main section#trabalhos .slick-dots li button:before {
     opacity: 0.15;
     color: black;
     font-size: 8px;
 }
-main section#trabalhos .slick-dots li.slick-active button:before{
+
+main section#trabalhos .slick-dots li.slick-active button:before {
     color: cyan;
     opacity: 0.85;
     font-size: 8px;
-} 
+}
+
 .slick-prev:before, .slick-next:before {
     font-size: 25px;
     opacity: 1;
     color: cyan;
 }
-main section#trabalhos a#galeria, main section#trabalhos a#grafiteorcamento  {
+
+main section#trabalhos a#galeria, main section#trabalhos a#grafiteorcamento {
     display: inline-block;
     /* width: 100%; */
     margin-top: 10px;
@@ -289,20 +304,22 @@ main section#trabalhos p, main section#depoimentos p {
     font-size: 1rem;
     margin-bottom: 20px;
 }
+
 main section#trabalhos p, main section#depoimentos p:nth-child(2) {
-    color:blue
+    color: blue
 }
 
-main section#trabalhos, main section#depoimentos .slick-dots li button:before{
+main section#trabalhos, main section#depoimentos .slick-dots li button:before {
     opacity: 0.15;
     color: black;
     font-size: 8px;
 }
-main section#trabalhos, main section#depoimentos .slick-dots li.slick-active button:before{
+
+main section#trabalhos, main section#depoimentos .slick-dots li.slick-active button:before {
     color: cyan;
     opacity: 0.85;
     font-size: 8px;
-} 
+}
 
 main section#grafiteiro-profissional {
     margin-top: 20px;
@@ -326,15 +343,16 @@ main section#grafiteiro-profissional ul {
 }
 
 /* **************** ANTES E DEPOIS ******************* */
+
 main section#antes-depois {
-    background-image: linear-gradient(to bottom, white, #eaeaea,#eaeaea, white);
+    background-image: linear-gradient(to bottom, white, #eaeaea, #eaeaea, white);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
+
 main section#antes-depois img#gostou-vantagens {
     width: 100%;
 }
-
 
 main section#antes-depois h2, main section#antes-depois figure legend {
     display: none;
@@ -655,9 +673,7 @@ main section#orcamento form button {
     font-weight: 500;
 }
 
-
-
-
+/* ORCAMENTO */
 
 #botao-orcamento a {
     position: relative;
@@ -681,6 +697,7 @@ main section#orcamento form button {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+
 .mudarexto1 {
     animation-name: mudarexto1;
     animation-duration: 2s;
@@ -697,9 +714,7 @@ main section#orcamento form button {
     z-index: 1;
 }
 
-
-
-@keyframes mudarexto-orcamento{
+@keyframes mudarexto-orcamento {
     from {
         opacity: 1;
     }
@@ -750,40 +765,44 @@ main article#duvidas i {
     color: cyan;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
 }
-footer a{
+
+footer a {
     text-decoration: none;
     color: inherit;
 }
+
 footer p#redes-sociais {
     display: flex;
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
 }
+
 footer p#redes-sociais i {
     font-size: 1.5rem;
     margin-right: 30px;
 }
+
 footer p {
     width: 100%;
     font-size: .9rem;
-    text-align: center;    
+    text-align: center;
 }
 
 footer p em {
     font-style: normal;
     font-weight: 700;
 }
+
 footer p em span {
     font-weight: 300;
 }
-
 
 /*************** TABLET ***************/
 
@@ -791,7 +810,6 @@ footer p em span {
     header {
         padding: 20px 20px;
     }
-    
     /* LOGOTIPO */
     header img {
         width: 350px;
@@ -799,7 +817,6 @@ footer p em span {
     header label i {
         font-size: 2.5rem;
     }
-
     /* MAIN */
     main {
         margin-top: 20px;
@@ -822,7 +839,6 @@ footer p em span {
         height: 80px;
         font-size: 5rem;
     }
-
     /* COMO CONTRATAR - VÍDEOS */
     main section#como-contratar {
         flex-direction: row;
@@ -832,7 +848,6 @@ footer p em span {
         /* border: 2px solid purple; */
     }
     main section#como-contratar #entenda {
-        
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -841,21 +856,17 @@ footer p em span {
         height: 100%;
         /* border: 1px solid green; */
     }
-    
     main section#como-contratar article {
         width: 100%;
         margin-bottom: 0;
         height: 175px;
         /* border: 1px solid red; */
     }
-    
-    main section#como-contratar  #entenda iframe {
+    main section#como-contratar #entenda iframe {
         height: 50%;
         margin-top: 20px;
     }
-
     /* **************** SLIDE SHOW ******************* */
-
     main section .carousel {
         width: 83%;
     }
@@ -915,13 +926,10 @@ footer p em span {
     main section#antes-depois div figure img {
         width: 100%;
     }
-
     main section#antes-depois figure img {
         width: 95%;
         height: 320px;
     }
-   
-    
     main section#antes-depois>img {
         height: 100px;
         margin-top: 20px;
@@ -994,9 +1002,8 @@ footer p em span {
     }
     main section#antes-depois img#gostou-vantagens {
         width: 90%;
-        height: 200px; 
+        height: 200px;
         margin-left: calc(50% - 45%);
-     
     }
 }
 
@@ -1047,7 +1054,6 @@ footer p em span {
     header nav a:hover {
         color: cyan;
     }
-    
     main {
         padding: 0;
         /* margin-top: 20px; */
@@ -1094,18 +1100,16 @@ footer p em span {
         font-weight: 100;
         color: #333;
     }
-
     /* EBOOK */
     main section#ebook {
         padding-bottom: 200px;
-        background-image: url('../assets/imagens-corpo-do-site/ebook-background.jpg') ;
+        background-image: url('../assets/imagens-corpo-do-site/ebook-background.jpg');
         background-size: 100% 100%;
         /* background-size: cover; */
         background-origin: border-box;
         background-repeat: no-repeat;
         /* border: 5px solid red; */
     }
-    
     main section#ebook div#form-box {
         flex-direction: row;
         justify-content: center;
@@ -1115,26 +1119,20 @@ footer p em span {
         border-radius: 0;
         background-color: transparent;
     }
-
     main section#ebook div#form-box form {
         width: 400px;
         margin-left: 200px;
         margin-top: 150px;
-
     }
     main section#ebook div#form-box form button {
         bottom: -70px;
-
     }
-    
     main section#ebook figure {
         display: none;
     }
-
-
     main section#antes-depois img#gostou-vantagens {
         width: 100%;
-        height: 300px; 
+        height: 300px;
         margin: 0;
         margin-top: 20px;
     }
@@ -1165,14 +1163,12 @@ footer p em span {
         height: 190px;
         padding: 15px 15px;
     } */
-    
     main section#como-contratar {
         height: 600px;
     }
     main section#como-contratar #video-contratar {
         width: 48%;
     }
-
     main section#como-contratar #entenda article {
         width: 100%;
         /* height: 350px; */
