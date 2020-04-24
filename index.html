@@ -7,38 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Paradoxo Grafite, o seu Grafiteiro com serviços de qualide!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <!-- 
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.5.0/dist/viewer.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/viewerjs@1.5.0/dist/viewer.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/viewerjs@1.5.0/dist/viewer.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
     <div id="container">
         <header>
-            <!-- <span id="logotipo">PARADOXO <span>Grafite</span></span> -->
             <img src="./assets/icones/logo-paradoxo-grafite.png" alt="Paradoxo Grafite">
-            <!-- <label for="abrir-menu">
-                <i class="fas fa-bars"></i>
-            </label> -->
-            <input type="checkbox" id="abrir-menu">
+        </header>
 
-            <nav>
-                <div>
-                    <label for="abrir-menu">
-                        <i class="fas fa-plus"></i>
-                    </label>
-                </div>
+        <!-- MENU -->
+        <label id="btn-menu" for="abrir-menu">
+            <i class="fas fa-bars"></i>
+            <span>menu</span>
+        </label>
+        <input type="checkbox" id="abrir-menu">
+        <div id="layer-menu"></div>
+        <nav>
+            <label for="abrir-menu">
+                X
+            </label>
+            <div id="links">
+
                 <a href="#trabalhos">Trabalhos</a>
                 <a href="https://pintei.com.br/" target="_blank">Blog</a>
                 <a href="#orcamento">Contato</a>
-            </nav>
-        </header>
+            </div>
+
+            <div id="menu-social">
+                <a href="https://www.instagram.com/paradoxografite/" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCYr3D9OacRvQkvsDiy3Db6g" target="_blank"><i
+                        class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/paradoxografite" target="_blank"><i
+                        class="fab fa-facebook-square"></i></a>
+                <a href="https://pintei.com.br/" target="_blank"><i class="fab fa-wordpress"></i></a>
+            </div>
+        </nav>
 
         <main>
             <section id="banner">
@@ -60,7 +73,7 @@
 
                 </article>
 
-                <a href="javascritp:void" class="btn-link">Contratar Grafiteiro</a>
+                <a href="javascritp:void" class="btn-link">Solicitar Grafiteiro</a>
             </section>
 
             <article id="artegrafite">
@@ -70,10 +83,33 @@
 
             <section id="realizados">
                 <h3>Veja Nossos <span>Grafites</span></h3>
+                <ul id="images" class="carousel">
+                    <li><img id="fist-image" src="./images/veja-grafites-3D/Grafite de carro.jpg" alt="java"/></li>
+                    <li><img src="./images/veja-grafites-3D/grafite de paisagem.jpg" alt="Grafite" /></li>
+                    <li><img src="./images/veja-grafites-3D/Grafite do Chaves.jpg" alt="kotlin" /></li>
+                    <li><img src="./images/veja-grafites-3D/grafite em restaurante.jpg" alt="scala" /></li>
+                    <li><img src="./images/veja-grafites-3D/Grafite em ótica paradoxo grafite.jpg" alt="C#" /></li>
+                </ul>
             </section>
 
+            <!--**************** Slide Show ****************-->
+            <!-- <section id="trabalhos"> -->
+                <!-- <h2>Veja nossos Grafites</h2>
+                <a href="javascritp:void" id="galeria">Galeria de fotos</a> -->
+                    <!-- <ul id="images" class="carousel">
+                        <li><img id="fist-image" src="./images/veja-grafites-3D/Grafite de carro.jpg" alt="java"/></li>
+                        <li><img src="./images/veja-grafites-3D/grafite de paisagem.jpg" alt="Grafite" /></li>
+                        <li><img src="./images/veja-grafites-3D/Grafite do Chaves.jpg" alt="kotlin" /></li>
+                        <li><img src="./images/veja-grafites-3D/grafite em restaurante.jpg" alt="scala" /></li>
+                        <li><img src="./images/veja-grafites-3D/Grafite em ótica paradoxo grafite.jpg" alt="C#" /></li>
+                    </ul> -->
+
+                <!-- <a href="javascritp:void" id="grafites">Veja Grafites 3D</a>
+                <a href="#orcamento" id="grafiteorcamento">Solicitar um orçamento</a> -->
+            <!-- </section> -->
+
             <section id="avaliacoes">
-                <h3>Avaliações dos <span>Clientes</span></h3>
+                <h3>O que os clientes falam do nosso <span>Grafite</span></h3>
             </section>
 
             <section id="transforme" class="informativo">
@@ -143,18 +179,32 @@
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <input type="number" id="telefone" name="telefone" placeholder="Telefone" required>
                     <input type="text" id="cidade" name="cidade" placeholder="Loaclizacao" required>
-                    <textarea name="mensgem" id="mensgem" cols="30" rows="10"></textarea>
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
 
-                    <button class="animacao-botao" type="submit" id="enviar-orcamento" name="enviar-orcamento">Enviar
+                    <button class="animacao-botao" type="button" id="enviar-orcamento" onclick="enviarOrcamento()" name="enviar-orcamento">Enviar
                         Orçamento</button>
                 </form>
             </section>
+
+
+            <!--**************** Botões de contato ****************-->
+            <article id="duvidas">
+                <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511983504952" target="_blank">
+                    <img src="./assets/icones/whatsapp-logo.png" alt="contato-whatsapp"
+                        title="Tire suas dúvidas pelo whatsapp">
+                </a>
+                <figure>
+                    <a href="tel:+55-11-98350-4952" target="_blank">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </figure>
+            </article>
         </main>
 
         <footer>
             <p>(11) 98350-4952</p>
             <p>contato@paradoxografite.com.br</p>
-            
+
             <p id="redes-sociais">
                 <a href="https://www.instagram.com/paradoxografite/" target="_blank"><i
                         class="fab fa-instagram"></i></a>
@@ -168,6 +218,14 @@
             <p><em>PARADOXO <span>Grafite &copy;</span></em></p>
         </footer>
     </div>
+
+
+
+
+
+
+    <script type="text/javascript" src="./js/index.js"></script>
+    <!-- <script type="text/javascript" src="./js/menu-smooth.js"></script> -->
 </body>
 
 </html>

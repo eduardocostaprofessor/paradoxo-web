@@ -59,63 +59,107 @@ header img {
     font-family: sans-serif;
 }
 
-header label i {
-    font-size: 1.5rem;
-    color: #666666;
+
+/************************ NAV ************************/
+#btn-menu {
+    position: fixed;
+    left: 10px;
+    top: calc( 50% - (50px / 2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    color: white;
+    background-color: #eabe32;
+    border-radius: 3px;
+    z-index: 1;
 }
 
-header #abrir-menu {
-    display: none;
+#btn-menu i {
+    font-size: 1.2rem;
 }
 
-header #abrir-menu:checked~nav {
-    left: 0;
-    opacity: 1;
+#btn-menu span {
+    font-size: .8rem;
 }
 
-header nav {
+#layer-menu {
     position: fixed;
     top: 0;
     left: -100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     height: 100%;
-    padding: 25px 0 15px;
-    background-color: cyan;
+    background-color: #eabe32;
     opacity: 0;
-    z-index: 1;
-    transition: left .4s, opacity 0.8s;
+    transition: opacity .75s, left .2s;
+    z-index: 2;
 }
 
-header nav div {
+nav {
+    position: fixed;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: -100%;
     width: 80%;
-}
-
-header nav div i {
-    color: #333;
-    font-size: 2rem;
-    opacity: 0;
-    transform: rotate(45deg);
-    transition: opacity 0.8s, transform .8s;
-}
-
-header #abrir-menu:checked~nav>div label i {
+    height: 100%;
+    background-color: #eabe32;
+    padding: 20px;
     opacity: 1;
-    transform: rotate(-45deg);
+    transition: left .2s;
+
+    z-index: 3;
 }
 
-header nav a {
+nav div#links {
+    display: flex;
+    flex-direction: column;
+    /* height: 50%; */
+    /* border: 1px solid red; */
+}
+
+nav div#links a {
+    margin-top: 20px;
+}
+
+nav label {
+    align-self: flex-end;
+    color: white;
+    font-size: 3rem;
+    /* border: 1px solid white; */
+}
+
+nav div a {
     text-decoration: none;
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+nav div#menu-social {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+/* nav div#menu-social a {
     color: #333;
-    width: 90%;
-    border-bottom: 2px dashed #333;
-    padding: 25px;
-    font-size: 1.8rem;
-    text-align: center;
+} */
+
+#abrir-menu {
+    display: none;
+}
+
+#abrir-menu:checked~nav {
+    left: 0; 
+}
+
+#abrir-menu:checked~#layer-menu {
+    left: 0;
+    opacity: .7;
 }
 
 /************************ MAIN ************************/
@@ -137,6 +181,174 @@ main section#banner {
 main section#banner img {
     width: 90%;
 }
+
+/* DÚVIDAS CONTATO */
+
+main article#duvidas {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    /* border: 1px solid black; */
+}
+
+/* botoes contato */
+main article#duvidas img {
+    width: 45px;
+    height: 45px;
+}
+
+main article#duvidas figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #eabe32;
+}
+
+main article#duvidas i {
+    font-size: 0.9rem;
+    color: #eabe32;
+}
+
+
+
+
+
+
+
+/* **************** SLIDE SHOW ******************* */
+
+/* main section#trabalhos, main section#depoimentos {
+    background-color: #e9e9e9;
+    color: #333;
+    padding: 10px;
+}
+
+main section#trabalhos, h2 {
+    color: #333;
+} */
+
+main section .carousel {
+    padding: 15px 0 0 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+main section .carousel img {
+    width: 90%;
+    height: 100%;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+.viewer-toolbar>ul>li:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* main section#trabalhos .slick-slide {
+    display: flex!important;
+    justify-content: center;
+} */
+
+main section#realizados .slick-dots li button:before {
+    opacity: 0.15;
+    color: #333;
+    font-size: 8px;
+}
+
+main section#realizados .slick-dots li.slick-active button:before {
+    color: #eabe32;
+    opacity: 0.85;
+    font-size: 8px;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 25px;
+    opacity: 1;
+    color: #eabe32;
+}
+
+/* main section#trabalhos a#galeria, main section#trabalhos a#grafiteorcamento {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    background-color: cyan;
+    color: #595958;
+    border-radius: 8px;
+} */
+
+/* main section#trabalhos a#grafites {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    color: #595958;
+    border-radius: 8px;
+    border: cyan 1px solid
+} */
+
+/* main section#trabalhos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+
+/* main section#trabalhos h2, main section#depoimentos h2 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+} */
+
+/* main section#trabalhos p, main section#depoimentos p {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 20px;
+} */
+
+/* main section#trabalhos p, main section#depoimentos p:nth-child(2) {
+    color: blue
+}
+
+main section#trabalhos, main section#depoimentos .slick-dots li button:before {
+    opacity: 0.15;
+    color: black;
+    font-size: 8px;
+}
+
+main section#trabalhos, main section#depoimentos .slick-dots li.slick-active button:before {
+    color: cyan;
+    opacity: 0.85;
+    font-size: 8px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 main section#banner .btn-link, main section#grafiteiro .btn-link {
     display: inline-block;
@@ -243,6 +455,10 @@ section#realizados h3 span, section#avaliacoes h3 span {
     display: block;
     color: #eabe32;
 }
+
+
+
+
 
 /* TEXTOS INFORMATIVOS */
 
@@ -450,6 +666,33 @@ footer p em span {
         width: 400px;
         margin-top: 20px;
     }
+    
+    /* NAV */
+    #btn-menu {
+        top: calc( 50% - (75px / 2));
+        height: 75px;
+        width: 75px;
+    }
+    #btn-menu i {
+        font-size: 1.6rem;
+    }
+    #btn-menu span {
+        font-size: 1rem;
+    }
+
+    nav {
+        width: 50%;
+    }
+    nav label {
+        font-size: 5rem;
+    }
+    nav div a {
+        font-size: 5rem;
+    }
+    nav div a {
+        font-size: 2.3rem;
+    }
+
     main {
         padding: 50px 0px 20px;
         /* margin-top: 20px; */
@@ -507,7 +750,7 @@ footer p em span {
     }
     /* TEXTOS INFORMATIVOS */
     section.informativo h2 {
-        width: 60%;
+        width: 50%;
         font-size: 2.8rem;
         line-height: 3.8rem;
     }
@@ -566,7 +809,6 @@ footer p em span {
         width: 85%;
         margin-bottom: 40px;
     }
-    
     main section#orcamento form button {
         width: 85%;
         max-width: 290px;
@@ -575,14 +817,11 @@ footer p em span {
         margin-bottom: 40px;
         color: #fff;
     }
-
     /* FOOTER */
-
     footer {
         padding: 40px;
         font-size: 1.6rem;
     }
-
     footer p {
         line-height: 2.3rem;
     }
@@ -599,7 +838,7 @@ footer p em span {
     }
     footer p#redes-sociais i {
         font-size: 1.8rem;
-        color: #333 ;
+        color: #333;
     }
 }
 
@@ -611,6 +850,19 @@ footer p em span {
     header {
         margin-top: 20px;
     }
+
+    /* nav */
+    nav {
+        max-width: 280px;
+    }
+    nav label {
+        font-size: 3rem;
+    }
+    nav div a {
+        font-size: 1.5rem;
+    }
+
+
     main {
         padding: 0;
         margin-top: 40px;
