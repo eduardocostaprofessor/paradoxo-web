@@ -139,6 +139,7 @@ nav label {
     align-self: flex-end;
     color: white;
     font-size: 3rem;
+    cursor: pointer;
     /* border: 1px solid white; */
 }
 
