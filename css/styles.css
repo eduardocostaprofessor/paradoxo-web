@@ -30,7 +30,15 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transition: opacity .6s;
 }
-
+#loading {
+    display: none;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    z-index: 100;
+}
 /*************** MOBILE ***************/
 
 /* HEADER */
@@ -218,11 +226,92 @@ main article#duvidas i {
 }
 
 
+/* ********************* GLERIA ********************* */
+main section#galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
 
+}
 
+main section#galeria ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
 
+main section#galeria li {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+main section#galeria li img {
+    width: 90%;
+    
+    cursor: pointer;
+}
 
+main section#galeria a {
+    display: inline-block;
+    width: 90%;
+    max-width: 270px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    background-color: #eabe32;
+    border: 1px solid #eabe32;
+    border-radius: 8px;
+}
 
+main article#modal {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: 0;
+    z-index: 10;
+
+    transition: left 0.4s, opacity 1s;
+}
+
+main article#modal span {
+    position: absolute;
+    top:5px;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+main article#modal figure {
+    width: 80%;
+}
+
+main article#modal figure img {
+    width: 100%;
+}
 /* **************** SLIDE SHOW ******************* */
 
 /* main section#trabalhos, main section#depoimentos {
@@ -401,7 +490,8 @@ main section#grafiteiro #grafiteirofaz {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     margin-top: 20px;
     background-color: #eabe32;
 }
@@ -446,13 +536,13 @@ section#realizados, section#avaliacoes {
     justify-content: center;
 }
 
-section#realizados h3, section#avaliacoes h3 {
+section#realizados h3, section#avaliacoes h3, section#galeria h3 {
     text-align: center;
     margin-top: 40px;
     font-size: 1.8rem;
 }
 
-section#realizados h3 span, section#avaliacoes h3 span {
+section#realizados h3 span, section#avaliacoes h3 span, section#galeria h3 span {
     display: block;
     color: #eabe32;
 }
@@ -738,6 +828,20 @@ footer p em span {
     main section#grafiteiro #grafiteirofaz p {
         width: 50%;
     }
+
+
+
+    main section#galeria ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    main section#galeria ul li {
+        width: 40%;
+    }
+
+
+
     /* REALIZADOS */
     /* section#realizados, section#avaliacoes {
         display: flex;
@@ -745,7 +849,7 @@ footer p em span {
         align-items: center;
         justify-content: center;
     } */
-    section#realizados h3, section#avaliacoes h3 {
+    section#realizados h3, section#avaliacoes h3, section#galeria h3 {
         font-size: 2.8rem;
         line-height: 3.8rem
     }
@@ -903,8 +1007,18 @@ footer p em span {
         max-width: 1000px;
         /* margin-top: 40px; */
     }
+
+/* ********************* GLERIA ********************* */
+
+    main section#galeria ul li {
+        width: 30%;
+    }
+
+
+
+
     /* REALIZADOS */
-    section#realizados h3, section#avaliacoes h3 {
+    section#realizados h3, section#avaliacoes h3, section#galeria h3 {
         font-size: 2.8rem;
         line-height: 3.8rem
     }
@@ -925,4 +1039,10 @@ footer p em span {
 
 /* ***************** FULL HD ***************** */
 
-@media screen and (min-width: 1440px) {}
+@media screen and (min-width: 1920px) {
+    div#container {
+        max-width: 1920px;
+        margin: 0 auto;
+        /* border: 5px solid red; */
+    }
+}

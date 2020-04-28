@@ -18,7 +18,8 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body onload="thumbLoadSimulation()">
+    <img id="loading" src="./assets/icones/gif.svg" alt="">
     <div id="container">
         <header>
             <img src="./assets/icones/logo-paradoxo-grafite.png" alt="Paradoxo Grafite">
@@ -80,8 +81,28 @@
                 <img src="./assets/imagens-corpo-do-site/grafiteiros.svg" alt="Arte Grafite">
             </article>
 
+            <section id="galeria">
+                <h3>Veja Nossos <span>Grafites</span></h3>
 
-            <section id="realizados">
+                <ul id="galeria-lista">
+                    <!-- <li><img onclick="showModal(true, '01g')" src="./images/trabalhos/thumbs/01.jpg" alt=""></li>
+                    <li><img onclick="showModal(true, '02g')" src="./images/trabalhos/thumbs/02.jpg" alt=""></li>
+                    <li><img onclick="showModal(true, '03g')" src="./images/trabalhos/thumbs/03.jpg" alt=""></li>
+                    <li><img onclick="showModal(true, '04g')" src="./images/trabalhos/thumbs/04.jpg" alt=""></li>
+                    <li><img onclick="showModal(true, '05g')" src="./images/trabalhos/thumbs/05.jpg" alt=""></li>
+                    <li><img onclick="showModal(true, '06g')" src="./images/trabalhos/thumbs/06.jpg" alt=""></li> -->
+                </ul>
+
+                <a href="javascritp:void" class="btn-link" onclick="thumbLoadSimulation()">Ver Mais</a>
+            </section>
+            <article id="modal">
+                <span onclick="showModal(false)">X</span>
+                <figure>
+                    <img src="./images/trabalhos/Grafite de carro.jpg" alt="">
+                </figure>
+            </article>
+
+            <!-- <section id="realizados">
                 <h3>Veja Nossos <span>Grafites</span></h3>
                 <ul id="images" class="carousel">
                     <li><img id="fist-image" src="./images/veja-grafites-3D/Grafite de carro.jpg" alt="java"/></li>
@@ -90,7 +111,7 @@
                     <li><img src="./images/veja-grafites-3D/grafite em restaurante.jpg" alt="scala" /></li>
                     <li><img src="./images/veja-grafites-3D/Grafite em ótica paradoxo grafite.jpg" alt="C#" /></li>
                 </ul>
-            </section>
+            </section> -->
 
             <!--**************** Slide Show ****************-->
             <!-- <section id="trabalhos"> -->
