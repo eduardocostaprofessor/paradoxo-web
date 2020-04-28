@@ -6,13 +6,13 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     color: #999999;
     font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Helvetica, sans-serif;
+    font-family: 'Arial Bold', sans-serif;
     text-align: center;
     text-transform: uppercase;
 }
@@ -79,6 +79,7 @@ header img {
     align-items: center;
     height: 50px;
     width: 50px;
+    cursor: pointer;
     color: white;
     background-color: #eabe32;
     border-radius: 3px;
@@ -159,6 +160,7 @@ nav div#menu-social {
 
 #abrir-menu {
     display: none;
+    cursor: pointer;
 }
 
 #abrir-menu:checked~nav {
@@ -660,7 +662,7 @@ main section#orcamento form {
 
 main section#orcamento form h2 {
     margin: 20px 0;
-    color: #333;
+    /* color: #333; */
 }
 
 main section#orcamento form input {
@@ -691,8 +693,14 @@ main section#orcamento form textarea {
     border-radius: 5px;
 }
 
+main section#orcamento form input::placeholder,
+main section#orcamento form textarea::placeholder {
+    color: lightgray;
+}
+
 main section#orcamento form button {
     width: 100%;
+    max-width: 270px;
     height: 55px;
     border-radius: 8px;
     /* border: 1px solid #333; */
@@ -875,6 +883,7 @@ footer p em span {
         margin-left: 100px;
     }
     section.informativo ul li {
+        width: 100%;
         font-size: 1.8rem;
         line-height: 2.6rem;
     }
@@ -903,7 +912,8 @@ footer p em span {
     main section#orcamento form h2 {
         margin-bottom: 40px;
     }
-    main section#orcamento form input {
+    main section#orcamento form input,
+    main section#orcamento form textarea {
         width: 85%;
         height: 60px;
         margin-bottom: 40px;
@@ -952,9 +962,9 @@ footer p em span {
 /* @media screen and (min-width: 992px) {} */
 
 @media screen and (min-width: 992px) {
-    header {
-        margin-top: 20px;
-    }
+    /* header {
+        margin-top: 0px;
+    } */
 
     /* nav */
     nav {
@@ -970,14 +980,14 @@ footer p em span {
 
     main {
         padding: 0;
-        margin-top: 40px;
+        margin-top: 20px;
     }
     main section#banner {
         margin-top: 0px;
     }
     main section#banner img {
         width: auto;
-        max-height: 600px;
+        max-height: 480px;
     }
     /* main section#grafiteiro h1 {
         font-size: 4rem;
