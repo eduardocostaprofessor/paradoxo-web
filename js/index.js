@@ -70,11 +70,11 @@ function enviarOrcamento() {
         alert('preencha todos os campos corretamente')
     } else {
 
-        console.log(nome);
-        console.log(email);
-        console.log(telefone);
-        console.log(cidade);
-        console.log(mensagem);
+        // console.log(nome);
+        // console.log(email);
+        // console.log(telefone);
+        // console.log(cidade);
+        // console.log(mensagem);
 
         const URL_TO_FETCH = 'http://paradoxografite.com.br/v2/email.php';
         const dados = { nome, email, telefone, cidade, mensagem }
