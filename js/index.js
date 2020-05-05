@@ -78,7 +78,6 @@ function enviarOrcamento() {
 
         const URL_TO_FETCH = 'http://paradoxografite.com.br/v2/email.php';
         const dados = { nome, email, telefone, cidade, mensagem }
-        const headers = { method: post }
         fetch(url, dados)
 
         fetch(URL_TO_POST, {
@@ -89,13 +88,10 @@ function enviarOrcamento() {
         }).then(function (data) {
             console.log(data);
             
+        }).catch(function (err) {
+            console.log('deu ruinm');
+            
         });
-
-        // fetch(URL)
-        //     .then(resposta => resposta.json())
-        //     .then(data => data)
-        //     .catch(erro => console.error(erro));
-
 
         alert('enviando ... só que não!');
     }
