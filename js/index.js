@@ -12,45 +12,45 @@ let galeryInit = 0;
 let galeryQtd = 3;
 const fatorIncremento = 3;
 
-$('.carousel').slick({
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    fade: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: true,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                fade: true,
-            }
-        },
+// $('.carousel').slick({
+//     dots: true,
+//     infinite: true,
+//     speed: 1000,
+//     fade: false,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     responsive: [
+//         {
+//             breakpoint: 1024,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 infinite: true,
+//                 dots: true,
+//             }
+//         },
+//         {
+//             breakpoint: 600,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//             }
+//         },
+//         {
+//             breakpoint: 480,
+//             settings: {
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 fade: true,
+//             }
+//         },
 
-    ]
-});
+//     ]
+// });
 
-const viewer = new Viewer(document.getElementById('images'), {
+// const viewer = new Viewer(document.getElementById('images'), {
 
-})
+// })
 
 
 function enviarOrcamento() {
@@ -76,6 +76,27 @@ function enviarOrcamento() {
         console.log(cidade);
         console.log(mensagem);
 
+        const URL_TO_FETCH = 'http://paradoxografite.com.br/v2/email.php';
+        const dados = { nome, email, telefone, cidade, mensagem }
+        const headers = { method: post }
+        fetch(url, dados)
+
+        fetch(URL_TO_POST, {
+            method: 'post',
+            body: JSON.parse(dados) 
+        }).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log(data);
+            
+        });
+
+        // fetch(URL)
+        //     .then(resposta => resposta.json())
+        //     .then(data => data)
+        //     .catch(erro => console.error(erro));
+
+
         alert('enviando ... só que não!');
     }
 }
@@ -99,7 +120,7 @@ function showModal(show = falseÍ, url = '') {
         console.log(img);
         console.log(url);
 
-        img.src = `./images/trabalhos/${url}.jpg`;
+        // img.src = `./images/trabalhos/${url}.jpg`;
         modal.style.left = `${left}%`;
         modal.style.opacity = opacity;
         gifLoading(false);
