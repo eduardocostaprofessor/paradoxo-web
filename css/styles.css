@@ -336,11 +336,17 @@ main section .carousel img {
     align-items: center;
 }
 
-/* main section#trabalhos .slick-slide {
-    display: flex!important;
-    justify-content: center;
-} */
-
+/* *********** CORREÇÕES DE AVALIAÇÃO ******************* */
+.slick-prev {
+    left: -30px;
+}
+.slick-slide p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.slick-dots li.slick-active button:before {
+    color: #eabe32 !important;
+}
 main section#realizados .slick-dots li button:before {
     opacity: 0.15;
     color: #333;

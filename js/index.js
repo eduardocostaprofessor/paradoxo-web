@@ -12,43 +12,44 @@ let galeryInit = 0;
 let galeryQtd = 3;
 const fatorIncremento = 3;
 
-// $('.carousel').slick({
-//     dots: true,
-//     infinite: true,
-//     speed: 1000,
-//     fade: false,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     responsive: [
-//         {
-//             breakpoint: 1024,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 infinite: true,
-//                 dots: true,
-//             }
-//         },
-//         {
-//             breakpoint: 600,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//             }
-//         },
-//         {
-//             breakpoint: 480,
-//             settings: {
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 fade: true,
-//             }
-//         },
 
-//     ]
-// });
+$('.carousel').slick({
+    dots: true,
+    infinite: true,
+    speed: 1000,
+    fade:false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive:[
+    {
+        breakpoint: 1024,
+        settings:{
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true,
+        }
+    },
+    {
+        breakpoint: 600,
+        settings:{
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+    },
+    {
+        breakpoint: 480,
+        settings:{
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade:true,
+        }
+    },
 
-// const viewer = new Viewer(document.getElementById('images'), {
+]
+});
+
+// const viewer = new Viewer(document.getElementById('images'),{
 
 // })
 
@@ -89,7 +90,7 @@ function enviarOrcamento() {
             console.log(data);
             
         }).catch(function (err) {
-            console.log('deu ruinm');
+            console.log('deu ruim');
             
         });
 
@@ -100,7 +101,7 @@ function enviarOrcamento() {
 function showModal(show = falseÍ, url = '') {
     gifLoading(true);
 
-    setTimeout(function () {
+    // setTimeout(function () {
         let left;
         let opacity;
         const modal = document.querySelector('main article#modal');
@@ -109,18 +110,19 @@ function showModal(show = falseÍ, url = '') {
         if (show) {
             left = 0;
             opacity = 0.95;
+            img.src = `./images/trabalhos/${url}.jpg`;
         } else {
             left = -100;
             opacity = 0;
         }
-        console.log(img);
-        console.log(url);
+        // console.log(img);
+        // console.log(url);
 
         // img.src = `./images/trabalhos/${url}.jpg`;
         modal.style.left = `${left}%`;
         modal.style.opacity = opacity;
         gifLoading(false);
-    }, 500)
+    // }, 500)
 
 }
 
@@ -138,7 +140,7 @@ function thumbLoadSimulation(init = galeryInit, qtd = galeryQtd) {
             galeryQtd += fatorIncremento;
         }
         gifLoading(false);
-    }, 1000)
+    }, 500)
 
 }
 
