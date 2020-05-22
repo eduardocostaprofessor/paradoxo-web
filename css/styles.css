@@ -30,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0;
     transition: opacity .6s;
 }
+
 #loading {
     display: none;
     width: 80px;
@@ -39,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     left: calc(50% - 40px);
     z-index: 100;
 }
+
 /*************** MOBILE ***************/
 
 /* HEADER */
@@ -67,8 +69,8 @@ header img {
     font-family: sans-serif;
 }
 
-
 /************************ NAV ************************/
+
 #btn-menu {
     position: fixed;
     left: 10px;
@@ -120,7 +122,6 @@ nav {
     padding: 20px;
     opacity: 1;
     transition: left .2s;
-
     z-index: 3;
 }
 
@@ -155,6 +156,7 @@ nav div#menu-social {
     display: flex;
     justify-content: space-between;
 }
+
 /* nav div#menu-social a {
     color: #333;
 } */
@@ -165,7 +167,7 @@ nav div#menu-social {
 }
 
 #abrir-menu:checked~nav {
-    left: 0; 
+    left: 0;
 }
 
 #abrir-menu:checked~#layer-menu {
@@ -207,6 +209,7 @@ main article#duvidas {
 }
 
 /* botoes contato */
+
 main article#duvidas img {
     width: 45px;
     height: 45px;
@@ -228,8 +231,8 @@ main article#duvidas i {
     color: #eabe32;
 }
 
-
 /* ********************* GLERIA ********************* */
+
 main section#galeria {
     display: flex;
     flex-direction: column;
@@ -237,7 +240,6 @@ main section#galeria {
     align-items: center;
     width: 100%;
     margin-top: 20px;
-
 }
 
 main section#galeria ul {
@@ -254,19 +256,21 @@ main section#galeria li {
     margin-top: 10px;
     /* border: 1px solid red; */
 }
+
 main section#galeria li img {
     width: 90%;
-    
+    height: auto;
     cursor: pointer;
 }
 
 main section#galeria a {
     display: inline-block;
     width: 90%;
-    max-width: 270px;
+    max-width: 270px !important;
+    height: 45px;
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     font-weight: bold;
     text-decoration: none;
@@ -288,13 +292,12 @@ main article#modal {
     background-color: #333;
     opacity: 0;
     z-index: 10;
-
     transition: left 0.4s, opacity 1s;
 }
 
 main article#modal span {
     position: absolute;
-    top:5px;
+    top: 5px;
     right: 5px;
     display: flex;
     justify-content: center;
@@ -315,6 +318,7 @@ main article#modal figure {
 main article#modal figure img {
     width: 100%;
 }
+
 /* **************** SLIDE SHOW ******************* */
 
 main section .carousel {
@@ -337,16 +341,23 @@ main section .carousel img {
 }
 
 /* *********** CORREÇÕES DE AVALIAÇÃO ******************* */
+
 .slick-prev {
     left: -30px;
 }
+
 .slick-slide p {
-    text-align: justify;
+    /* text-align: justify; */
+    text-align: center;
+    line-height: 23px;
     margin-bottom: 20px;
+    font-size: .9rem;
 }
+
 .slick-dots li.slick-active button:before {
     color: #eabe32 !important;
 }
+
 main section#realizados .slick-dots li button:before {
     opacity: 0.15;
     color: #333;
@@ -365,43 +376,93 @@ main section#realizados .slick-dots li.slick-active button:before {
     color: #eabe32;
 }
 
-
 /* DEPOIMENTOS */
 
-main section#trabalhos, main section#depoimentos {
-    background-color: #e9e9e9;
-    color: #333;
-    padding: 10px;
+main section#depoimentos {
+    /* main section#trabalhos,  */
+    margin-top: 40px;
+    color: #808080;
 }
 
-
-
-main section .carousel {
-    padding: 15px 0 0 0 ;
-    width: 80%;
-    margin: 0 auto;
+main section#depoimentos>figure {
+    display: none;
 }
-main section .carousel img{
-    width: 90%;
-    height: 100%;
-    padding: 0 5px;
+
+main section#depoimentos .carousel {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(233, 233, 233, 1);
+    /* color: #333; */
+    border-radius: 5px;
 }
-.viewer-toolbar>ul>li:before {
+
+main section#depoimentos .carousel div {
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+
+main section#depoimentos .carousel div>p:last-of-type {
+    font-weight: bold;
+    /* margin-left: -25px; */
+    /* text-align: left; */
+}
+
+main section#depoimentos .carousel div figure {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50px;
+    height: 50px;
+    color: white;
+    /* background-color: #3d2a2a; */
+    /* border: 1px solid #3d2a2a; */
+    border: none;
+    border-radius: 50%;
 }
-main section#trabalhos .slick-slide  {
+
+main section#depoimentos .carousel div figure img {
+    width: 50px;
+    height: 50px;
+    padding: 0 !important;
+    border: none;
+    border-radius: 50%;
+}
+
+/* main section .carousel {
+    padding: 15px 0 0 0 ;
+    width: 80%;
+    margin: 0 auto;
+} */
+
+/* main section .carousel img{
+    width: 90%;
+    height: 100%;
+    padding: 0 5px;
+} */
+
+/* .viewer-toolbar>ul>li:before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* main section#trabalhos .slick-slide  {
     display: flex!important;
     justify-content: center;
-}
-
-
-
+} */
 
 main section#banner .btn-link, main section#grafiteiro .btn-link {
-    display: inline-block;
-    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: inline-block; */
+    width: 100%;
+    max-width: 270px !important;
+    height: 45px;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -505,10 +566,6 @@ section#realizados h3 span, section#avaliacoes h3 span, section#galeria h3 span 
     display: block;
     color: #eabe32;
 }
-
-
-
-
 
 /* TEXTOS INFORMATIVOS */
 
@@ -650,24 +707,25 @@ main section#orcamento form textarea {
     border-radius: 5px;
 }
 
-main section#orcamento form input::placeholder,
-main section#orcamento form textarea::placeholder {
+main section#orcamento form input::placeholder, main section#orcamento form textarea::placeholder {
     color: lightgray;
 }
 
 main section#orcamento form button {
     width: 100%;
     max-width: 270px;
-    height: 55px;
+    height: 45px;
     border-radius: 8px;
     /* border: 1px solid #333; */
     border: 1px solid #eabe32;
     background-color: #eabe32;
-    font-size: 1.3rem;
-    cursor: pointer;
-    color: #333;
-    opacity: 1;
+    font-size: 1.2rem;
     font-weight: 500;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    /* color: #333; */
+    color: white;
+    opacity: 1;
 }
 
 /* FOOTER */
@@ -723,7 +781,6 @@ footer p em span {
         width: 400px;
         margin-top: 20px;
     }
-    
     /* NAV */
     #btn-menu {
         top: calc( 50% - (75px / 2));
@@ -736,7 +793,6 @@ footer p em span {
     #btn-menu span {
         font-size: 1rem;
     }
-
     nav {
         width: 50%;
     }
@@ -749,7 +805,6 @@ footer p em span {
     nav div a {
         font-size: 2.3rem;
     }
-
     main {
         padding: 50px 0px 20px;
         /* margin-top: 20px; */
@@ -758,9 +813,12 @@ footer p em span {
         width: 70%;
     }
     main section#banner .btn-link, main section#grafiteiro .btn-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 40px;
-        padding: 15px 40px;
-        font-size: 1.5rem;
+        height: 60px;
+        font-size: 1.3rem;
     }
     main section#grafiteiro {
         margin-top: 40px;
@@ -794,30 +852,56 @@ footer p em span {
     main section#grafiteiro #grafiteirofaz p {
         width: 50%;
     }
-
-
-
+    /* GALERIA */
+    main section#galeria a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+    }
     main section#galeria ul {
         flex-direction: row;
         flex-wrap: wrap;
     }
-
     main section#galeria ul li {
         width: 40%;
     }
-
-
-
-    /* REALIZADOS */
-    /* section#realizados, section#avaliacoes {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    } */
     section#realizados h3, section#avaliacoes h3, section#galeria h3 {
         font-size: 2.8rem;
         line-height: 3.8rem
+    }
+    /* DEPOIMENTOS */
+    main section#depoimentos {
+        padding: 0 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* justify-content: flex-start !important; */
+        justify-content: center;
+    }
+    main section#depoimentos h2 {
+        width: 100% !important;
+        /* background-color: red; */
+    }
+    main section#depoimentos .carousel {
+        width: 50%;
+        max-width: 550px;
+        margin-right: 40px;
+    }
+    .slick-slide p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+    main section#depoimentos>figure {
+        display: flex;
+        align-items: flex-end;
+        width: 40%;
+        /* max-width: 350px; */
+        height: 460px;
+        overflow: hidden;
+    }
+    main section#depoimentos>figure img {
+        width: 100%;
     }
     /* TEXTOS INFORMATIVOS */
     section.informativo h2 {
@@ -870,8 +954,7 @@ footer p em span {
     main section#orcamento form h2 {
         margin-bottom: 40px;
     }
-    main section#orcamento form input,
-    main section#orcamento form textarea {
+    main section#orcamento form input, main section#orcamento form textarea {
         width: 85%;
         height: 60px;
         margin-bottom: 40px;
@@ -879,14 +962,14 @@ footer p em span {
         font-size: 1.6rem;
     }
     main section#orcamento form textarea {
-        width: 85%;
-        margin-bottom: 40px;
+        height: 250px;
     }
     main section#orcamento form button {
         width: 85%;
-        max-width: 290px;
+        /* max-width: 290px; */
         height: 60px;
-        font-size: 1.6rem;
+        /* font-size: 1.6rem; */
+        font-size: 1.3rem;
         margin-bottom: 40px;
         color: #fff;
     }
@@ -923,7 +1006,6 @@ footer p em span {
     /* header {
         margin-top: 0px;
     } */
-
     /* nav */
     nav {
         max-width: 280px;
@@ -934,8 +1016,6 @@ footer p em span {
     nav div a {
         font-size: 1.5rem;
     }
-
-
     main {
         padding: 0;
         margin-top: 20px;
@@ -947,10 +1027,6 @@ footer p em span {
         width: auto;
         max-height: 450px;
     }
-    /* main section#grafiteiro h1 {
-        font-size: 4rem;
-        margin-top: 20px;
-    } */
     main section#grafiteiro p {
         margin-top: 20px;
         width: 50%;
@@ -970,22 +1046,35 @@ footer p em span {
         width: 50%;
         font-size: 1.8rem;
         line-height: 2.5rem;
-    }
+    }            
     article#artegrafite img {
         max-width: 1000px;
         /* margin-top: 40px; */
     }
-
-/* ********************* GLERIA ********************* */
-
+    /* ********************* GLERIA ********************* */
     main section#galeria ul li {
         width: 30%;
+    }
+
+    main section#depoimentos .carousel {
+        padding: 30px;
+    }
+
+    /* DEPOIMENTOS DESKTOP */
+
+    main section#depoimentos .carousel {
+        max-width: 650px;
+        margin-right: auto;
+    }
+    main section#depoimentos > figure img {
+        width: 385px;
     }
 
 
 
 
-    /* REALIZADOS */
+
+
     section#realizados h3, section#avaliacoes h3, section#galeria h3 {
         font-size: 2.8rem;
         line-height: 3.8rem
