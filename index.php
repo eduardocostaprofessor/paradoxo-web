@@ -2,13 +2,9 @@
 header('Access-Control-Allow-Origin: *');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-    // echo 'dados<pre>';
-    // print_r($_POST);
-    // exit;
+
 if ( isset($_POST['enviar-orcamento']) ) {
-    // echo 'enviar email<pre>';
-    // print_r($_POST);
-    // exit;
+    
     $nome = trim($_POST['nome']);
     $email = trim($_POST['email']);
     $telefone = trim($_POST['telefone']);
@@ -36,7 +32,6 @@ if ( isset($_POST['enviar-orcamento']) ) {
         $mail->Port = 465;
         // $mail->Port = 587;
 
-
         // Usar autenticação SMTP (obrigatório) 
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
@@ -59,8 +54,8 @@ if ( isset($_POST['enviar-orcamento']) ) {
         $mail->FromName = 'Paradoxo Grafite';
 
         // Define o(s) destinatário(s) 
+        // $mail->AddAddress('contato@paradoxografite.com.br', 'Luciano');
         $mail->AddAddress('contato@paradoxografite.com.br', 'Luciano');
-        // $mail->AddAddress('mendes.educosta@gmail.com', 'Dudinhas');
 
         // Definir se o e-mail é em formato HTML ou texto plano 
         // Formato HTML . Use "false" para enviar em formato texto simples ou "true" para HTML.
@@ -69,7 +64,7 @@ if ( isset($_POST['enviar-orcamento']) ) {
         // Charset (opcional) 
         $mail->CharSet = 'UTF-8';
 
-        // Assunto da mensagem 
+        // Assunto da mensagem
         $mail->Subject = "Orçamento Grafite: $nome $email";
 
         // Corpo do email 
@@ -80,6 +75,7 @@ if ( isset($_POST['enviar-orcamento']) ) {
         if ($mail->Send()) {
             // echo json_encode('{"mensagem" : "Enviado com sucesso."}') ;
            $msgResult = "Orçamento enviado com sucesso." ;
+           echo "<script>alert('$msgResult')</script>";
         } else {
             // echo "Não foi possível enviar o e-mail: " . $mail->ErrorInfo;
             // echo json_encode('{"mensagem" : "Problemas no envio de e-mail."}') ;
@@ -130,9 +126,9 @@ if ( isset($_POST['enviar-orcamento']) ) {
                     X
                 </label>
                 <div id="links">
-                    <a href="#galeria" onclick="fecharMenu()">Trabalhos</a>
-                    <a href="#sobre" onclick="fecharMenu()">Sobre</a>
-                    <a href="#orcamento"  onclick="fecharMenu()">Contato</a>
+                    <a href="#galeria" id="link-galeria" onclick="fecharMenu()">Trabalhos</a>
+                    <a href="#sobre" id="link-sobre" onclick="fecharMenu()">Sobre</a>
+                    <a href="#orcamento"  id="link-orcamento" onclick="fecharMenu()">Contato</a>
                     <a href="https://pintei.com.br/"  onclick="fecharMenu()" target="_blank">Blog</a>
                 </div>
 
@@ -151,7 +147,7 @@ if ( isset($_POST['enviar-orcamento']) ) {
                 <section id="banner">
                     <img src="./assets/icones/paradoxo grafite.svg" alt="">
 
-                    <a href="#galeria" class="btn-link">Galeria de fotos</a>
+                    <a href="#galeria" id="btn-galeria" class="btn-link">Galeria de fotos</a>
                 </section>
 
                 <section id="grafiteiro" class="btn-link">

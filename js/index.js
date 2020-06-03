@@ -209,7 +209,8 @@ function thumbLoadSimulation(init = galeryInit, qtd = galeryQtd) {
 function carregarFotos() {
 
     // const URL = 'http://localhost/paradoxo_api/trabalhos.php';
-    const URL = 'http://paradoxografite.com.br/v2/trabalhos.php';
+    // const URL = 'http://paradoxografite.com.br/v2/trabalhos.php';
+    const URL = 'https://paradoxografite.com.br/v2/trabalhos.php';
     fetch(URL)
         .then(response => {
             return response.json()

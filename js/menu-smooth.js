@@ -6,7 +6,14 @@
 
 const menuItems = document.querySelectorAll('header nav a[href^="#"]');
 // document.querySelector('#go-top').addEventListener('click', scrollToIdOnClick)
+
+// aplica os smooth onde precisar
 document.querySelector('#grafiteorcamento').addEventListener('click', scrollToIdOnClick)
+document.querySelector('#link-galeria').addEventListener('click', scrollToIdOnClick)
+document.querySelector('#link-sobre').addEventListener('click', scrollToIdOnClick)
+document.querySelector('#link-orcamento').addEventListener('click', scrollToIdOnClick)
+document.querySelector('#link-galeria').addEventListener('click', scrollToIdOnClick)
+document.querySelector('#btn-galeria').addEventListener('click', scrollToIdOnClick)
 
 let mostra = true
 
@@ -34,7 +41,7 @@ function scrollToPosition(to) {
   
   setTimeout(function () {
     
-    mostraEscondeIcone()
+    // mostraEscondeIcone()
   }, 500)
 
 }
