@@ -556,13 +556,13 @@ section#realizados, section#avaliacoes {
     justify-content: center;
 }
 
-section#realizados h3, section#avaliacoes h3, section#galeria h3 {
+section#realizados h3, section#avaliacoes h3, section#galeria h3, section#depoimentos h3 {
     text-align: center;
     margin-top: 40px;
     font-size: 1.8rem;
 }
 
-section#realizados h3 span, section#avaliacoes h3 span, section#galeria h3 span {
+section#realizados h3 span, section#avaliacoes h3 span, section#galeria h3 span, section#depoimentos h3 span {
     display: block;
     color: #eabe32;
 }
@@ -866,7 +866,7 @@ footer p em span {
     main section#galeria ul li {
         width: 40%;
     }
-    section#realizados h3, section#avaliacoes h3, section#galeria h3 {
+    section#realizados h3, section#avaliacoes h3, section#galeria h3, section#depoimentos h3 {
         font-size: 2.8rem;
         line-height: 3.8rem
     }
@@ -879,10 +879,12 @@ footer p em span {
         /* justify-content: flex-start !important; */
         justify-content: center;
     }
-    main section#depoimentos h2 {
+    main section#depoimentos h3 {
         width: 100% !important;
-        /* background-color: red; */
+        font-size: 2.8rem;
+        line-height: 3.8rem;
     }
+    /* background-color: red; */
     main section#depoimentos .carousel {
         width: 50%;
         max-width: 550px;
@@ -1046,7 +1048,7 @@ footer p em span {
         width: 50%;
         font-size: 1.8rem;
         line-height: 2.5rem;
-    }            
+    }
     article#artegrafite img {
         max-width: 1000px;
         /* margin-top: 40px; */
@@ -1055,27 +1057,18 @@ footer p em span {
     main section#galeria ul li {
         width: 30%;
     }
-
     main section#depoimentos .carousel {
         padding: 30px;
     }
-
     /* DEPOIMENTOS DESKTOP */
-
     main section#depoimentos .carousel {
         max-width: 650px;
         margin-right: auto;
     }
-    main section#depoimentos > figure img {
+    main section#depoimentos>figure img {
         width: 385px;
     }
-
-
-
-
-
-
-    section#realizados h3, section#avaliacoes h3, section#galeria h3 {
+    section#realizados h3, section#avaliacoes h3, section#galeria h3, section#depoimentos h3 {
         font-size: 2.8rem;
         line-height: 3.8rem
     }

@@ -5,7 +5,7 @@
 */
 
 const menuItems = document.querySelectorAll('header nav a[href^="#"]');
-document.querySelector('#go-top').addEventListener('click', scrollToIdOnClick)
+// document.querySelector('#go-top').addEventListener('click', scrollToIdOnClick)
 document.querySelector('#grafiteorcamento').addEventListener('click', scrollToIdOnClick)
 
 let mostra = true
@@ -90,6 +90,6 @@ function scrollToIdOnClick(event) {
    
 menuItems.forEach(item => {
     item.addEventListener('click', scrollToIdOnClick);
-    console.log('função rodando');
+    // console.log('função rodando');
     
 });

@@ -1,13 +1,14 @@
 // ary de fotos para simulação da galeria
-const arrFotos = [
+let arrFotos = [];
+// const arrFotosORIGINAL = [
 
-    "./images/trabalhos/thumbs/01.jpg",
-    "./images/trabalhos/thumbs/02.jpg",
-    "./images/trabalhos/thumbs/03.jpg",
-    "./images/trabalhos/thumbs/04.jpg",
-    "./images/trabalhos/thumbs/05.jpg",
-    "./images/trabalhos/thumbs/06.jpg"
-];
+//     "./images/trabalhos/thumbs/01.jpg",
+//     "./images/trabalhos/thumbs/02.jpg",
+//     "./images/trabalhos/thumbs/03.jpg",
+//     "./images/trabalhos/thumbs/04.jpg",
+//     "./images/trabalhos/thumbs/05.jpg",
+//     "./images/trabalhos/thumbs/06.jpg"
+// ];
 let galeryInit = 0;
 let galeryQtd = 3;
 const fatorIncremento = 3;
@@ -54,7 +55,14 @@ $('.carousel').slick({
 // })
 
 
+function fecharMenu() {
+    // console.clear();
+    document.getElementById('btn-menu').click();
+    
+}
+
 function enviarOrcamento() {
+
     const nome = document.getElementById('nome').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefone = document.getElementById('telefone').value.trim();
@@ -77,28 +85,34 @@ function enviarOrcamento() {
         // console.log(cidade);
         // console.log(mensagem);
 
-        const URL_TO_FETCH = 'http://paradoxografite.com.br/v2/email.php';
-        const dados = { nome, email, telefone, cidade, mensagem }
-        fetch(url, dados)
+        // const URL_TO_FETCH = 'http://paradoxografite.com.br/v2/email.php';
+        // const dados = { nome, email, telefone, cidade, mensagem }
+        // console.log(dados);
+        
 
-        fetch(URL_TO_POST, {
-            method: 'post',
-            body: JSON.parse(dados) 
-        }).then(function (response) {
-            return response.json();
-        }).then(function (data) {
-            console.log(data);
+        // fetch(URL_TO_FETCH, {
+        //     method: 'post',
+        //     headers: {'Content-Type':'application/json'},
+        //     body: JSON.stringify(dados) 
+        // }).then(function (response) {
+        //     console.log(response);
             
-        }).catch(function (err) {
-            console.log('deu ruim');
+        //     return response.json();
+        // }).then(function (data) {
+        //     console.log(data);
             
-        });
+        // }).catch(function (err) {
+        //     console.log('deu ruim');
+            
+        // });
 
-        alert('enviando ... só que não!');
+        alert('Enviando Orçamento...');
+
+        document.frmorcamento.submit();
     }
 }
 
-function showModal(show = falseÍ, url = '') {
+function showModalORIGINAL(show = falseÍ, url = '') {
     gifLoading(true);
 
     // setTimeout(function () {
@@ -125,9 +139,36 @@ function showModal(show = falseÍ, url = '') {
     // }, 500)
 
 }
+function showModal(show = falseÍ, url = '') {
+    gifLoading(true);
+
+    // setTimeout(function () {
+        let left;
+        let opacity;
+        const modal = document.querySelector('main article#modal');
+        const img = document.querySelector('main article#modal figure img');
+
+        if (show) {
+            left = 0;
+            opacity = 0.95;
+            img.src = url;
+        } else {
+            left = -100;
+            opacity = 0;
+        }
+        // console.log(img);
+        // console.log(url);
+
+        // img.src = `./images/trabalhos/${url}.jpg`;
+        modal.style.left = `${left}%`;
+        modal.style.opacity = opacity;
+        gifLoading(false);
+    // }, 500)
+
+}
 
 
-function thumbLoadSimulation(init = galeryInit, qtd = galeryQtd) {
+function thumbLoadSimulationORIGINAL(init = galeryInit, qtd = galeryQtd) {
     gifLoading(true);
     setTimeout(function () {
         let t = '';
@@ -141,8 +182,54 @@ function thumbLoadSimulation(init = galeryInit, qtd = galeryQtd) {
         }
         gifLoading(false);
     }, 500)
-
+    
 }
+
+function thumbLoadSimulation(init = galeryInit, qtd = galeryQtd) {
+    gifLoading(true);
+    setTimeout(function () {
+        
+        let t = '';
+        if (init < arrFotos.length) {
+            
+            for (let f = init; f < qtd; f++){
+                t += `<li><img onclick="showModal(true, '${arrFotos[f][1]}')" src='${arrFotos[f][0]}' alt=""></li>`;
+                // console.log(t);
+                
+            }
+            
+            document.querySelector('#galeria-lista').innerHTML += t;
+            galeryInit += fatorIncremento;
+            galeryQtd += fatorIncremento;
+        }
+        gifLoading(false);
+    }, 500)
+}
+
+function carregarFotos() {
+
+    // const URL = 'http://localhost/paradoxo_api/trabalhos.php';
+    const URL = 'http://paradoxografite.com.br/v2/trabalhos.php';
+    fetch(URL)
+        .then(response => {
+            return response.json()
+            
+        }).then(data => {
+            // console.clear();
+            
+            // console.log(data);
+            
+            arrFotos = data;//todas as fotos
+            // console.log(arrFotos);
+            thumbLoadSimulation();
+        })
+        .catch(e => {
+            console.log(e);
+            console.log('deu ruim');
+            
+        })
+}
+
 
 function gifLoading(show = false) {
     if (show)
