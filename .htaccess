@@ -1,0 +1,6 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^paradoxografite\.com\.br$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.paradoxografite\.com\.br$
+RewriteRule ^/?$ "https\:\/\/paradoxografite\.com\.br\/v2" [R=301,L]
+

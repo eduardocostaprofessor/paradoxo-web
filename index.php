@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+// header('Access-Control-Allow-Origin: *');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -92,7 +92,9 @@ if ( isset($_POST['enviar-orcamento']) ) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Paradoxo Grafite, o seu Grafiteiro com serviços de qualide!</title>
+        <title>Grafiteiro: 5 sinais de que você precisa fazer um grafite | PARADOXO</title>
+        <meta name="description" content="Somos grafiteiros profissionais. A PARADOXO Grafite faz muito mais que pinturas, entregamos grafites inovadores com um ótimo custo e benefício, confira nosso trabalho." />
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
@@ -107,7 +109,7 @@ if ( isset($_POST['enviar-orcamento']) ) {
         <link rel="stylesheet" href="./css/styles.css">
     </head>
 
-    <body onload="carregarFotos()">
+    <body onload="carregarFotos()" id="inicio">
         <img id="loading" src="./assets/icones/gif.svg" alt="">
         <div id="container">
             <header>
@@ -126,6 +128,7 @@ if ( isset($_POST['enviar-orcamento']) ) {
                     X
                 </label>
                 <div id="links">
+                    <a href="#inicio" id="link-inicio" onclick="fecharMenu()">Início</a>
                     <a href="#galeria" id="link-galeria" onclick="fecharMenu()">Trabalhos</a>
                     <a href="#sobre" id="link-sobre" onclick="fecharMenu()">Sobre</a>
                     <a href="#orcamento"  id="link-orcamento" onclick="fecharMenu()">Contato</a>
@@ -260,12 +263,12 @@ if ( isset($_POST['enviar-orcamento']) ) {
                     <p>O grafiteiro que é profissional, deve atender as exigências do cliente com maestria.</p>
 
                     <p>E no nosso caso, entendemos as necessidades dos nossos consumidores, fazemos algumas pesquisas, e
-                        ofertemos soluções inovadoras.</p>
+                        ofertamos soluções inovadoras.</p>
 
-                    <h3>Vejam quais são os benefícios do grafite:</h3>
+                    <h3 id="titulo-amarelo-luciano">5 sinais de que você precisa de um grafite</h3>
 
                     <ul>
-                        <li>Afasta os pichadores.</li>
+                        <li>Afasta os pichadores</li>
                         <li>Protege contra ferrugem e umidade</li>
                         <li>Destaca-se da concorrência</li>
                         <li>Valoriza o seu espaço</li>
@@ -280,15 +283,15 @@ if ( isset($_POST['enviar-orcamento']) ) {
                     <p>Olá, me chamo Luciano, sou o fundador da PARADOXO Grafite.</p>
 
                     <p>Nossa empresa tem 10 anos de experiência no mercado. No decorrer desses anos, tivemos o privilégio de
-                        participar de vários projetos e conhecer diversos clientes, sem contar-nos que se tornaram brothers.
+                        participar de vários projetos e conhecer diversos clientes, sem contar os que se tornaram amigos.
                     </p>
 
-                    <p>Nosso job é entender a sua necessidade, e dar total atenção para o seu projeto.</p>
+                    <p>Nosso job é entender a sua necessidade e dar total atenção para o seu projeto.</p>
 
-                    <p>Quer saber como? É simples, mergulhamos de cabeça em seu seguimento, para compreender o seu público,
+                    <p>Quer saber como? É simples, mergulhamos de cabeça em seu seguimento para compreender o seu público,
                         e então elaboramos um layout, feito isso, executamos um grafite da hora.</p>
 
-                    <p>Ah, se precisar, fazemos logotipos e, inserimos no design A vantagem é que o logo pode ser usado
+                    <p>Ah, se precisar, fazemos logotipos e inserimos no design, a vantagem é que o logo pode ser usado
                         futuramente em panfletos, banners, cartões de visitas, sites, redes sociais e etc.­­­</p>
                 </section>
 

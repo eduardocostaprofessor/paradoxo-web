@@ -210,7 +210,7 @@ function carregarFotos() {
 
     // const URL = 'http://localhost/paradoxo_api/trabalhos.php';
     // const URL = 'http://paradoxografite.com.br/v2/trabalhos.php';
-    const URL = 'https://paradoxografite.com.br/v2/trabalhos.php';
+    const URL = 'https://paradoxografite.com.br/trabalhos.php';
     fetch(URL)
         .then(response => {
             return response.json()

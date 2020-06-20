@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+#titulo-amarelo-luciano {
+    color: #eabe32;
+}
 body {
     font-family: Helvetica, sans-serif;
     color: #999999;

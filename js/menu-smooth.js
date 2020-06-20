@@ -10,6 +10,8 @@ const menuItems = document.querySelectorAll('header nav a[href^="#"]');
 // aplica os smooth onde precisar
 document.querySelector('#grafiteorcamento').addEventListener('click', scrollToIdOnClick)
 document.querySelector('#link-galeria').addEventListener('click', scrollToIdOnClick)
+//aplica efeito smooth scroll nos links de menu
+document.querySelector('#link-inicio').addEventListener('click', scrollToIdOnClick)
 document.querySelector('#link-sobre').addEventListener('click', scrollToIdOnClick)
 document.querySelector('#link-orcamento').addEventListener('click', scrollToIdOnClick)
 document.querySelector('#link-galeria').addEventListener('click', scrollToIdOnClick)
@@ -31,9 +33,9 @@ function scrollToPosition(to) {
   if ( window.screen.width < 992 ) {
     
     let navPosition = document.querySelector('nav').offsetLeft
-    if (navPosition === 0) {
-      document.querySelector('header label').click()
-    }
+    // if (navPosition === 0) {
+    //   document.querySelector('header label').click()
+    // }
     
     
   }
@@ -56,7 +58,7 @@ function mostraEscondeIcone() {
 
 
 function scrollToIdOnClick(event) {
-	event.preventDefault();
+	//event.preventDefault();
 	const to = getScrollTopByHref(event.currentTarget);//- 80
   scrollToPosition(to);
   
@@ -76,7 +78,7 @@ function scrollToIdOnClick(event) {
      const distanceY = endY - startY;
      const startTime = new Date().getTime();
    
-     duration = typeof duration !== 'undefined' ? duration : 1500;
+     duration = typeof duration !== 'undefined' ? duration : 1000;
    
      // Easing function
      const easeInOutQuart = (time, from, distance, duration) => {
